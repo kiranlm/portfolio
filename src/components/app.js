@@ -9,6 +9,7 @@ import RightPanel from "./RightPanel";
 
 // Code-splitting is automated for routes
 import Home from "../routes/home";
+import Footer from "./Footer/index.js";
 
 export default class App extends Component {
   componentDidMount() {
@@ -21,9 +22,9 @@ export default class App extends Component {
       minWidth: 200.0,
       scale: 1.0,
       scaleMobile: 1.0,
-      backgroundColor: 0xffffff,
-      color1: 0xd4ff,
-      color2: 0x4800ff,
+      backgroundColor: 0x000,
+      color1: 0xb70000,
+      color2: 0xd05901,
       colorMode: "variance",
       birdSize: 1.6,
       separation: 62.0,
@@ -48,7 +49,7 @@ export default class App extends Component {
   render() {
     return (
       <div id="app">
-        <div className="home-container">
+        <div className="container-fluid">
           <div id="birds" className="page-container row">
             <div className="col-sm-12 col-md-7 left">
               <Header />
@@ -57,6 +58,7 @@ export default class App extends Component {
               </Router>
             </div>
             <RightPanel />
+            <Footer />
           </div>
         </div>
       </div>
