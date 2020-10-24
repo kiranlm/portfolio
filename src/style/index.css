@@ -2,11 +2,15 @@ body {
   color: #fff;
 }
 canvas {
+  display: block;
   width: 100%;
+  height: 100%;
 }
 .page-container {
   display: flex;
   align-items: center;
+  position: absolute;
+  width: 100%;
 }
 .left {
   z-index: 2;
@@ -16,7 +20,9 @@ canvas {
   background-position: 3rem;
   min-height: 100vh;
   background-size: cover;
-  opacity: 0.6;
+  opacity: 0.5;
+  /* position: absolute;
+  right: 0; */
 }
 .right::after {
   content: "";
@@ -27,7 +33,7 @@ canvas {
   right: 100%;
   width: 10000px;
   height: 100%;
-  background-color: #9f006e;
+  background-color: #000000;
   transform-origin: bottom right;
   -webkit-transform: skewX(156deg);
   -moz-transform: skewX(156deg);
@@ -44,7 +50,7 @@ canvas {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: #fed30099;
+  background-color: #fedf0080;
 }
 .title-wrapper {
 }
@@ -53,23 +59,33 @@ canvas {
 .icon-container {
   position: absolute;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
-  bottom: 5%;
-  left: 2rem;
+  right: 2rem;
+  height: 100%;
 }
 .icon-wrapper {
   width: 5rem;
   height: 5rem;
   border: 3px solid #fff;
-  border-radius: 50%;
+  transform: skewX(-15deg);
   position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.icon-wrapper:hover {
+  transform: skewX(0deg);
+}
+.icon-wrapper i {
+  transform: skewX(15deg);
+}
+.icon-wrapper:hover i {
+  transform: skewX(0deg);
 }
 .icon-link {
   font-size: 42px;
@@ -80,4 +96,29 @@ canvas {
   width: calc(100% - 2rem);
   bottom: 2%;
   z-index: 1;
+}
+
+#circle-text {
+  position: absolute;
+  right: -6rem;
+  top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  /* color: #5f0042; */
+  color: #fff;
+  -webkit-animation: circle-text 7s infinite;
+  -moz-animation: circle-text 7s infinite;
+  -ms-animation: circle-text 7s infinite;
+  animation: circle-text 7s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+@keyframes circle-text {
+  100% {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
