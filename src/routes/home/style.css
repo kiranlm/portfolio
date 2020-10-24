@@ -1,2 +1,11 @@
-.home {
+.intro {
+  padding: 1rem;
+  width: 100%;
+}
+.title {
+  font-size: 2rem;
+}
+.name {
+  color: #ffee58;
+  font-weight: bold;
 }
