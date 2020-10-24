@@ -355,8 +355,8 @@ export default class App extends Component {
             <div className="col-sm-12 col-md-7 left">
               <Header />
               <Router onChange={this.handleRoute}>
-                {/* <Home path="/" /> */}
-                <Timeline path="/" />
+                <Home path="/" />
+                <Timeline path="/timeline" />
               </Router>
             </div>
             <RightPanel />

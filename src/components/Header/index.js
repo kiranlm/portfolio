@@ -1,8 +1,7 @@
-import { h } from "preact";
-import { Link } from "preact-router/match";
-import style from "./style.css";
+import * as styles from "./index.css";
 import { useEffect } from "preact/hooks";
 import CircleType from "circletype";
+import NavBar from "../Nav";
 const Header = () => {
   useEffect(() => {
     const circleType = new CircleType(document.getElementById("circle-text"));
@@ -10,10 +9,10 @@ const Header = () => {
   }, []);
   return (
     <div className="title-wrapper">
-      <h1>
-        <i className="fa fa-hand-peace-o" aria-hidden="true"></i> Hello ...
-      </h1>
-      <div id="circle-text">RUN - EAT - CODE - SLEEP - REPEAT - </div>
+      <NavBar />
+      <div id="circle-text" className={styles.circleText}>
+        RUN - EAT - CODE - SLEEP - REPEAT -{" "}
+      </div>
     </div>
   );
 };

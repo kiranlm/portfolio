@@ -97,28 +97,3 @@ canvas {
   bottom: 2%;
   z-index: 1;
 }
-
-#circle-text {
-  position: absolute;
-  right: -6rem;
-  top: 1rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  /* color: #5f0042; */
-  color: #fff;
-  -webkit-animation: circle-text 7s infinite;
-  -moz-animation: circle-text 7s infinite;
-  -ms-animation: circle-text 7s infinite;
-  animation: circle-text 7s infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  -ms-animation-timing-function: linear;
-  animation-timing-function: linear;
-}
-@keyframes circle-text {
-  100% {
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}

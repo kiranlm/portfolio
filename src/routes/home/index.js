@@ -1,11 +1,10 @@
-import { h } from "preact";
-
+import * as styles from "./style.css";
 export default function Home() {
   return (
-    <div className="description-container">
-      <p className="desc1">
-        I'm <span className="m1-txt2">Kiran LM</span>, I'm a Full stack web
-        developer
+    <div className={styles.intro}>
+      <p className={styles.title}>
+        Hello ... I am <span className={styles.name}>Kiran LM</span>, a
+        full-stack web developer from Kerala
       </p>
     </div>
   );
